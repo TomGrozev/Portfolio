@@ -1,0 +1,10 @@
+$bg-color: #fff;
+$dot-color: rgba(0,0,0,0.2);
+$dot-size: 1px;
+$dot-space: 22px;
+
+.bg-pattern {
+    background: linear-gradient(90deg, $bg-color calc($dot-space - $dot-size), transparent 1%) center,
+linear-gradient($bg-color calc($dot-space - $dot-size), transparent 1%) center, $dot-color;
+    background-size: $dot-space $dot-space;
+}

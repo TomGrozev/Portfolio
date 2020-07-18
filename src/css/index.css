@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+/*@import "./custom-base-styles.css";*/
+
+@import "tailwindcss/components";
+@import "custom_components.pcss";
+
+@import "tailwindcss/utilities";
+/*@import "./custom-utilities.css";*/
+
+section {
+    margin-top: 3rem;
+    position: relative;
+}
+
+.fall-fade-in {
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+}
+
+.fall-fade-in.show {
+    transition: all .4s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
