@@ -15,21 +15,13 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import LightLogo from "../Logo/light"
 
 function lightOrDark(colour) {
-  // Variables for red, green, blue values
   let r, g, b, hsp
-
-  // Check the format of the color, HEX or RGB?
   if (colour.match(/^rgb/)) {
-
-    // If RGB --> store the red, green, blue values in separate variables
     colour = colour.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/)
-
     r = colour[1]
     g = colour[2]
     b = colour[3]
   } else {
-
-    // If hex --> Convert it to RGB: http://gist.github.com/983661
     colour = +("0x" + colour.slice(1).replace(
       colour.length < 5 && /./g, "$&$&"))
 
@@ -37,20 +29,12 @@ function lightOrDark(colour) {
     g = colour >> 8 & 255
     b = colour & 255
   }
-
-  // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
   hsp = Math.sqrt(
     0.299 * (r * r) +
     0.587 * (g * g) +
     0.114 * (b * b)
   )
-
-  // Using the HSP value, determine whether the colour is light or dark
-  if (hsp > 127.5) {
-    return "light"
-  } else {
-    return "dark"
-  }
+  return hsp > 127.5 ? "light" : "dark"
 }
 
 const ScrollTop = ({colour, hide}) => {

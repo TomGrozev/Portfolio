@@ -1,22 +1,21 @@
 import React from 'react'
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import img from '../../../images/logo.svg'
 
-const Logo = ({ size, data }) => {
-  return (
-    <div className={"w-" + size}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-    </div>
-  )
-};
+const Logo = ({ size, invert }) => (
+  <div className={"w-" + size + (invert ? " invert" : "")}>
+    <img className={"m-0"} src={img}  alt="Tom Grozev"/>
+  </div>
+);
 
 Logo.propTypes = {
-  data: PropTypes.object.isRequired,
-  size: PropTypes.string
+  size: PropTypes.string,
+  invert: PropTypes.bool
 }
 
 Logo.defaultProps = {
-  size: `full`
+  size: `full`,
+  invert: false
 }
 
 export default Logo;

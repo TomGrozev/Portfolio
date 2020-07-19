@@ -25,3 +25,7 @@ section {
     visibility: visible;
     transform: translateY(0);
 }
+
+.invert {
+    filter: invert(100%);
+}
