@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import NavbarLinks from "../NavbarLinks"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import DarkLogo from "../../Logo/dark"
@@ -10,6 +10,6 @@ const Navbar = () => {
       <NavbarLinks />
     </div>
   )
-};
+}
 
-export default Navbar;
+export default Navbar

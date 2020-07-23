@@ -1,5 +1,5 @@
 {
-  "name": "tomgrozev",
+  "name": "tomgrozev-portfolio",
   "private": true,
   "description": "My personal portfolio website",
   "version": "0.1.0",
@@ -14,6 +14,7 @@
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-plugin-typography": "^2.5.10",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
@@ -29,6 +30,7 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
     "cssnano": "^4.1.10",
     "postcss-import": "^12.0.1",
     "postcss-simple-vars": "^5.0.2",

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import Navbar from "./Navbar"
 
 const Header = () => {
@@ -7,6 +7,6 @@ const Header = () => {
       <Navbar />
     </div>
   )
-};
+}
 
-export default Header;
+export default Header
