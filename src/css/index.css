@@ -1,5 +1,5 @@
 @import "tailwindcss/base";
-/*@import "./custom-base-styles.css";*/
+@import "./custom_base.pcss";
 
 @import "tailwindcss/components";
 @import "custom_components.pcss";
@@ -24,8 +24,4 @@ section {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-}
-
-.invert {
-    filter: invert(100%);
 }

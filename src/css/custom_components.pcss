@@ -1,5 +1,5 @@
 $bg-color: #fff;
-$dot-color: rgba(0,0,0,0.2);
+$dot-color: rgba(0,0,0,0.23);
 $dot-size: 1px;
 $dot-space: 22px;
 
@@ -7,4 +7,28 @@ $dot-space: 22px;
     background: linear-gradient(90deg, $bg-color calc($dot-space - $dot-size), transparent 1%) center,
 linear-gradient($bg-color calc($dot-space - $dot-size), transparent 1%) center, $dot-color;
     background-size: $dot-space $dot-space;
+}
+
+.button {
+    @apply clear-link bg-transparent border border-blue-400 text-blue-400 rounded-full py-2 px-6 whitespace-no-wrap;
+
+    &:hover {
+        @apply bg-blue-400 border-transparent text-white;
+    }
+
+    &:focus {
+        @apply outline-none;
+    }
+}
+
+.button-darker {
+    @apply button border-blue-600 text-blue-600;
+
+    &:hover {
+        @apply bg-blue-600 border-transparent text-white;
+    }
+
+    &:focus {
+        @apply outline-none;
+    }
 }

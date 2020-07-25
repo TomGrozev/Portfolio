@@ -6,6 +6,6 @@ module.exports = {
     require("stylelint"),
     require("tailwindcss"),
     process.env.NODE_ENV === "production" ? require("autoprefixer") : null,
-    require("cssnano")({ preset: "default" })
-  ]
+    require("cssnano")({ preset: "default" }),
+  ],
 }

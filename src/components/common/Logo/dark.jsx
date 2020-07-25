@@ -2,12 +2,10 @@ import React from "react"
 import Logo from "./index"
 import PropTypes from "prop-types"
 
-const DarkLogo = ({size}) => (
-  <Logo size={size} />
-);
+const DarkLogo = ({ size }) => <Logo size={size} />
 
 DarkLogo.propTypes = {
-  size: PropTypes.string
-};
+  size: PropTypes.string,
+}
 
-export default DarkLogo;
+export default DarkLogo

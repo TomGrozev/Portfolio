@@ -1,10 +1,8 @@
-const config = require('./src/data/config');
-
 module.exports = {
   siteMetadata: {
-    title: config.title,
-    description: config.description,
-    author: config.author,
+    title: "Tom Grozev",
+    description: "My personal portfolio site",
+    author: "Tom Grozev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +12,39 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/content/blogs`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              width: 800
+            }
+          },
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              markdownCaptions: true
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`
+        ]
+      }
     },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
@@ -25,15 +56,21 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        include: /images\/icons\/.*\.svg/,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#fff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-white.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

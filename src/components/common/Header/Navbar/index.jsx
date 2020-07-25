@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react"
 import NavbarLinks from "../NavbarLinks"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import DarkLogo from "../../Logo/dark"
+import { Link } from "gatsby"
 
-const Navbar = () => {
+const Navbar = ({home}) => {
   return (
-    <div className="container mx-auto px-4 flex py-6 items-center justify-between">
-      <DarkLogo as={AnchorLink} href="#home" size="10" />
-      <NavbarLinks />
+    <div className={"container mx-auto px-4 flex py-6 items-center justify-between" + (!home ? " border-b-2 border-gray-200" : "")}>
+      <Link to="/" className="clear-link"><DarkLogo size="10"/></Link>
+      <NavbarLinks home={home} />
     </div>
   )
-};
+}
 
-export default Navbar;
+export default Navbar
