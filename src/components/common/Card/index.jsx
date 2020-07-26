@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 const Card = ({ children, dark, classes }) => (
   <div
@@ -9,16 +9,16 @@ const Card = ({ children, dark, classes }) => (
   >
     {children}
   </div>
-)
+);
 
 Card.propTypes = {
   dark: PropTypes.bool,
   classes: PropTypes.string,
-}
+};
 
 Card.defaultProps = {
   dark: false,
   classes: "",
-}
+};
 
-export default Card
+export default Card;

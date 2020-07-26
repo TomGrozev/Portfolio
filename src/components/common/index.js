@@ -1,3 +1,3 @@
-export * from "./Layout"
-export * from "./SEO"
-export * from "./Header"
+export * from "../layout/Layout";
+export * from "./SEO";
+export * from "../layout/Header";

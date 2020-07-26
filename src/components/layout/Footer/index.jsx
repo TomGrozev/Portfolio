@@ -1,10 +1,14 @@
-import React from "react"
-import LightLogo from "../Logo/light"
-import SocialIcons from "../SocialIcons"
-import config from "../../../data/config"
+import React from "react";
+import LightLogo from "../../common/Logo/light";
+import SocialIcons from "../../common/SocialIcons";
+import config from "../../../data/config";
 
-const Footer = ({home}) => (
-  <footer className={"relative bg-gray-800 px-12 w-full pb-8 " +(home ? "pt-32" : "pt-10")}>
+const Footer = ({ home }) => (
+  <footer
+    className={
+      "relative bg-gray-800 px-12 w-full pb-8 " + (home ? "pt-32" : "pt-10")
+    }
+  >
     <div className="w-full flex flex-col items-center">
       <LightLogo size="20" dark={false} />
       <p className="text-lg font-light tracking-wider text-gray-500 my-6 text-center">
@@ -15,6 +19,6 @@ const Footer = ({home}) => (
       <small className="text-gray-500 mt-3">Made with love in Australia.</small>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

@@ -8,4 +8,4 @@ module.exports = {
     process.env.NODE_ENV === "production" ? require("autoprefixer") : null,
     require("cssnano")({ preset: "default" }),
   ],
-}
+};

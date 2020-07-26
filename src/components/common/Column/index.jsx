@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Icon from "../Icon"
-import IconList from "../IconList"
+import React from "react";
+import PropTypes from "prop-types";
+import Icon from "../Icon";
+import IconList from "../IconList";
 
-const IconListWrapper = args => (
+const IconListWrapper = (args) => (
   <li className="mt-5 mb-1">
     <IconList {...args} />
   </li>
-)
+);
 
 const RegularList = ({ items }) =>
   items &&
@@ -22,7 +22,7 @@ const RegularList = ({ items }) =>
         {item.title ? item.title : item}
       </p>
     </li>
-  ))
+  ));
 
 const List = ({ heading, type, items }) => {
   return (
@@ -40,8 +40,8 @@ const List = ({ heading, type, items }) => {
         )}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 const Column = ({ column }) => {
   return (
@@ -54,11 +54,11 @@ const Column = ({ column }) => {
       {column.lists &&
         column.lists.map((list, index) => <List key={index} {...list} />)}
     </div>
-  )
-}
+  );
+};
 
 Column.propTypes = {
   column: PropTypes.object.isRequired,
-}
+};
 
-export default Column
+export default Column;

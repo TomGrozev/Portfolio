@@ -1,6 +1,6 @@
-import React from "react"
-import AnchorLink from "react-anchor-link-smooth-scroll"
-import img from "../../../images/hero-img.svg"
+import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import img from "../../../images/hero-img.svg";
 
 const Thumbnail = () => (
   <div
@@ -9,7 +9,7 @@ const Thumbnail = () => (
   >
     <img className="max-w-full m-0" src={img} alt="Hi, I'm Tom." />
   </div>
-)
+);
 
 const Hero = () => (
   <div className="flex flex-wrap-reverse items-center justify-between mt-8 mb-32 sm:mb-24 md:mb-12">
@@ -25,6 +25,6 @@ const Hero = () => (
     </div>
     <Thumbnail />
   </div>
-)
+);
 
-export default Hero
+export default Hero;

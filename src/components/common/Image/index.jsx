@@ -1,8 +1,8 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-const Image = props => (
+const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -21,17 +21,17 @@ const Image = props => (
         }
       }
     `}
-    render={data => {
-      let image = null
+    render={(data) => {
+      let image = null;
       if (props.src !== "") {
-        image = data.images.edges.find(n => {
-          return n.node.relativePath.includes(props.src)
-        })
+        image = data.images.edges.find((n) => {
+          return n.node.relativePath.includes(props.src);
+        });
       }
       if (!image || !image.node || !image.node.childImageSharp) {
-        image = data.images.edges.find(n => {
-          return n.node.relativePath.match(/projects\/default\.jpg/)
-        })
+        image = data.images.edges.find((n) => {
+          return n.node.relativePath.match(/projects\/default\.jpg/);
+        });
       }
 
       return (
@@ -40,9 +40,9 @@ const Image = props => (
           alt={props.alt}
           fluid={image.node.childImageSharp.fluid}
         />
-      )
+      );
     }}
   />
-)
+);
 
-export default Image
+export default Image;

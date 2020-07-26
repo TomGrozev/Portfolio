@@ -15,4 +15,4 @@ module.exports = {
     opacity: ["responsive", "hover", "focus", "group-hover"],
   },
   plugins: [],
-}
+};

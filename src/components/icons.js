@@ -1,87 +1,91 @@
 import Angular, {
   ReactComponent as AngularInline,
-} from "../images/icons/angular.svg"
+} from "../images/icons/angular.svg";
 import ArangoDB, {
   ReactComponent as ArangoDBInline,
-} from "../images/icons/arangodb.svg"
-import Aws, { ReactComponent as AwsInline } from "../images/icons/aws.svg"
+} from "../images/icons/arangodb.svg";
+import Aws, { ReactComponent as AwsInline } from "../images/icons/aws.svg";
 import Backend, {
   ReactComponent as BackendInline,
-} from "../images/icons/backend.svg"
+} from "../images/icons/backend.svg";
 import Elixir, {
   ReactComponent as ElixirInline,
-} from "../images/icons/elixir.svg"
-import Flask, { ReactComponent as FlaskInline } from "../images/icons/flask.svg"
+} from "../images/icons/elixir.svg";
+import Flask, {
+  ReactComponent as FlaskInline,
+} from "../images/icons/flask.svg";
 import Frontend, {
   ReactComponent as FrontendInline,
-} from "../images/icons/frontend.svg"
+} from "../images/icons/frontend.svg";
 import Gatsby, {
   ReactComponent as GatsbyInline,
-} from "../images/icons/gatsby.svg"
+} from "../images/icons/gatsby.svg";
 import Github, {
   ReactComponent as GithubInline,
-} from "../images/icons/github.svg"
+} from "../images/icons/github.svg";
 import Graphql, {
   ReactComponent as GraphqlInline,
-} from "../images/icons/graphql.svg"
-import Html, { ReactComponent as HtmlInline } from "../images/icons/html.svg"
+} from "../images/icons/graphql.svg";
+import Html, { ReactComponent as HtmlInline } from "../images/icons/html.svg";
 import Javascript, {
   ReactComponent as JavascriptInline,
-} from "../images/icons/javascript.svg"
-import Jira, { ReactComponent as JiraInline } from "../images/icons/jira.svg"
+} from "../images/icons/javascript.svg";
+import Jira, { ReactComponent as JiraInline } from "../images/icons/jira.svg";
 import Jenkins, {
   ReactComponent as JenkinsInline,
-} from "../images/icons/jenkins.svg"
+} from "../images/icons/jenkins.svg";
 import Jetbrains, {
   ReactComponent as JetbrainsInline,
-} from "../images/icons/jetbrains.svg"
+} from "../images/icons/jetbrains.svg";
 import Kubernets, {
   ReactComponent as KubernetsInline,
-} from "../images/icons/kubernets.svg"
+} from "../images/icons/kubernets.svg";
 import Linkedin, {
   ReactComponent as LinkedinInline,
-} from "../images/icons/linkedin.svg"
-import Linux, { ReactComponent as LinuxInline } from "../images/icons/linux.svg"
-import Mail, { ReactComponent as MailInline } from "../images/icons/mail.svg"
+} from "../images/icons/linkedin.svg";
+import Linux, {
+  ReactComponent as LinuxInline,
+} from "../images/icons/linux.svg";
+import Mail, { ReactComponent as MailInline } from "../images/icons/mail.svg";
 import Mongodb, {
   ReactComponent as MongodbInline,
-} from "../images/icons/mongodb.svg"
+} from "../images/icons/mongodb.svg";
 import Nodejs, {
   ReactComponent as NodejsInline,
-} from "../images/icons/nodejs.svg"
+} from "../images/icons/nodejs.svg";
 import Phoenix, {
   ReactComponent as PhoenixInline,
-} from "../images/icons/phoenix.svg"
-import Php, { ReactComponent as PhpInline } from "../images/icons/php.svg"
+} from "../images/icons/phoenix.svg";
+import Php, { ReactComponent as PhpInline } from "../images/icons/php.svg";
 import Postcss, {
   ReactComponent as PostcssInline,
-} from "../images/icons/postcss.svg"
+} from "../images/icons/postcss.svg";
 import Python, {
   ReactComponent as PythonInline,
-} from "../images/icons/python.svg"
+} from "../images/icons/python.svg";
 import Reactjs, {
   ReactComponent as ReactjsInline,
-} from "../images/icons/reactjs.svg"
+} from "../images/icons/reactjs.svg";
 import Redhat, {
   ReactComponent as RedhatInline,
-} from "../images/icons/redhat.svg"
-import Sass, { ReactComponent as SassInline } from "../images/icons/sass.svg"
-import Swift, { ReactComponent as SwiftInline } from "../images/icons/swift.svg"
-import Tag, {
-  ReactComponent as TagInline,
-} from "../images/icons/tag.svg"
+} from "../images/icons/redhat.svg";
+import Sass, { ReactComponent as SassInline } from "../images/icons/sass.svg";
+import Swift, {
+  ReactComponent as SwiftInline,
+} from "../images/icons/swift.svg";
+import Tag, { ReactComponent as TagInline } from "../images/icons/tag.svg";
 import Tailwindcss, {
   ReactComponent as TailwindcssInline,
-} from "../images/icons/tailwindcss.svg"
+} from "../images/icons/tailwindcss.svg";
 import Terminal, {
   ReactComponent as TerminalInline,
-} from "../images/icons/terminal.svg"
+} from "../images/icons/terminal.svg";
 import Terraform, {
   ReactComponent as TerraformInline,
-} from "../images/icons/terraform.svg"
+} from "../images/icons/terraform.svg";
 import Twitter, {
   ReactComponent as TwitterInline,
-} from "../images/icons/twitter.svg"
+} from "../images/icons/twitter.svg";
 
 export const Icons = {
   Angular,
@@ -118,7 +122,7 @@ export const Icons = {
   Terminal,
   Terraform,
   Twitter,
-}
+};
 
 export const InlineIcons = {
   Angular: AngularInline,
@@ -155,6 +159,6 @@ export const InlineIcons = {
   Terminal: TerminalInline,
   Terraform: TerraformInline,
   Twitter: TwitterInline,
-}
+};
 
 export default Icons;

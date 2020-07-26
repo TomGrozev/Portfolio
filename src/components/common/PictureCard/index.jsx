@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import IconList from "../IconList"
-import Image from "../Image"
+import React from "react";
+import PropTypes from "prop-types";
+import IconList from "../IconList";
+import Image from "../Image";
 
 const PictureCard = ({ image, title, text, tech, indev, link }) => {
-  const LinkOrNotTag = typeof link === "undefined" || link === "" ? "div" : "a"
+  const LinkOrNotTag = typeof link === "undefined" || link === "" ? "div" : "a";
 
   return (
     <LinkOrNotTag
@@ -12,9 +12,11 @@ const PictureCard = ({ image, title, text, tech, indev, link }) => {
       style={{ minWidth: "320px", maxHeight: "280px" }}
       href={link}
       target="_blank"
+      rel="noreferrer"
     >
       <Image
         src={image}
+        alt={title}
         classes="rounded-lg h-full w-full absolute z-10 bg-cover bg-center group-hover:opacity-50 transition-all duration-500 ease-in-out pointer-events-none"
       />
       {indev && (
@@ -30,21 +32,23 @@ const PictureCard = ({ image, title, text, tech, indev, link }) => {
         <IconList items={tech} />
       </div>
     </LinkOrNotTag>
-  )
-}
+  );
+};
 
 PictureCard.defaultProps = {
   indev: false,
   link: undefined,
-}
+};
 
 PictureCard.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string])),
+  tech: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  ),
   indev: PropTypes.bool,
-  link: PropTypes.string
-}
+  link: PropTypes.string,
+};
 
-export default PictureCard
+export default PictureCard;

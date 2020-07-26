@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Tom Grozev",
+    title: "Tom Grozev | Full Stack Developer",
     description: "My personal portfolio site",
     author: "Tom Grozev",
   },
@@ -27,8 +27,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-embed-video`,
             options: {
-              width: 800
-            }
+              width: 800,
+            },
           },
           `gatsby-remark-responsive-iframe`,
           {
@@ -37,14 +37,14 @@ module.exports = {
               maxWidth: 800,
               linkImagesToOriginal: false,
               showCaptions: true,
-              markdownCaptions: true
+              markdownCaptions: true,
             },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
-        ]
-      }
+          `gatsby-remark-smartypants`,
+        ],
+      },
     },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
@@ -61,20 +61,21 @@ module.exports = {
         include: /images\/icons\/.*\.svg/,
       },
     },
+    `gatsby-plugin-zopfli`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio`,
-        short_name: `portfolio`,
+        name: `Tom Grozev | Full Stack Developer`,
+        short_name: `tomgrozev`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#663399`,
+        theme_color: `#1a202c`,
         display: `minimal-ui`,
-        icon: `src/images/logo-white.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
-}
+};

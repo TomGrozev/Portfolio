@@ -1,4 +1,4 @@
-import { Icons, InlineIcons } from "../components/icons"
+import { Icons, InlineIcons } from "../components/icons";
 
 export default {
   about: {
@@ -57,8 +57,7 @@ export default {
     {
       icon: Icons.Frontend,
       title: "Frontend",
-      description:
-        "Seamless and intuitive frontends are my specialty.",
+      description: "Seamless and intuitive frontends are my specialty.",
       lists: [
         {
           heading: "Languages I use",
@@ -195,12 +194,12 @@ export default {
         text: "Powerful project structure generators for flask professionals.",
         tech: [Icons.Python],
         link: "https://github.com/TomGrozev/flask-boom",
-      }
+      },
     ],
   },
   blog: {
     title: "Latest Blog Posts",
-    subtitle: ""
+    subtitle: "",
   },
   contact: {
     title: "Inspired. Hassle Free. Value.",
@@ -213,11 +212,7 @@ export default {
       },
       {
         icon: InlineIcons.Twitter,
-        link: "",
-      },
-      {
-        icon: InlineIcons.Linkedin,
-        link: "",
+        link: "https://twitter.com/TomGrozev",
       },
       {
         icon: InlineIcons.Mail,
@@ -226,6 +221,6 @@ export default {
     ],
   },
   footer: {
-    text: "Where inspiration and commitment meet."
-  }
-}
+    text: "Where inspiration and commitment meet.",
+  },
+};

@@ -1,15 +1,15 @@
-import React from "react"
-import {Link} from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import SEO from "../components/common/SEO"
-import Layout from "../components/common/Layout"
-import Hero from "../components/landing/Hero"
-import Card from "../components/common/Card"
+import SEO from "../components/common/SEO";
+import Layout from "../components/layout/Layout";
+import Hero from "../components/landing/Hero";
+import Card from "../components/common/Card";
 
-import config from "../data/config"
-import Column from "../components/common/Column"
-import PictureCard from "../components/common/PictureCard"
-import BlogList from "../components/common/BlogList"
+import config from "../data/config";
+import Column from "../components/common/Column";
+import BlogList from "../components/common/BlogList";
+import Projects from "../components/landing/Projects";
 
 const IndexPage = () => (
   <Layout home={true}>
@@ -22,7 +22,7 @@ const IndexPage = () => (
         <h3 className="text-center font-semibold text-white text-3xl my-4">
           {config.about.title}
         </h3>
-        <p className="w-9/12 mx-auto mt-2 mb-4 text-center tracking-wide font-light">
+        <p className="w-full md:w-9/12 mx-auto mt-2 mb-4 text-center tracking-wide font-light">
           {config.about.description}
         </p>
       </Card>
@@ -40,18 +40,21 @@ const IndexPage = () => (
       </h2>
       <p className="my-6 text-center">{config.projects.subtitle}</p>
 
-      <div
-        className="flex flex-wrap justify-around"
-        style={{ minHeight: "500px" }}
-      >
-        {config.projects.projects.map((project, index) => (
-          <PictureCard key={index} {...project} />
-        ))}
-      </div>
+      <Projects projects={config.projects.projects} />
 
       <div className="my-32 flex flex-col items-center">
-        <p className="text-center text-xl tracking-tight">Code is always better when its open sourced. Take a look at my contributions.</p>
-        <a className="button-darker" target="_blank" rel="noreferrer" href="https://github.com/TomGrozev">My GitHub Profile</a>
+        <p className="text-center text-xl tracking-tight">
+          Code is always better when its open sourced. Take a look at my
+          contributions.
+        </p>
+        <a
+          className="button-darker"
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/TomGrozev"
+        >
+          My GitHub Profile
+        </a>
       </div>
     </section>
     <section id="blog">
@@ -62,7 +65,9 @@ const IndexPage = () => (
 
       <BlogList limit={3} />
       <div className="flex justify-center">
-        <Link to="/blog" className="button-darker">All Blog Posts</Link>
+        <Link to="/blog" className="button-darker">
+          All Blog Posts
+        </Link>
       </div>
     </section>
     <section id="contact" className="-mb-16">
@@ -70,9 +75,9 @@ const IndexPage = () => (
         dark={true}
         classes="z-30 py-6 px-10 flex flex-wrap md:flex-no-wrap items-center justify-around"
       >
-        <h5 className="font-semibold text-white text-xl md:my-4">
+        <h3 className="font-semibold text-white text-xl md:my-4">
           {config.contact.title}
-        </h5>
+        </h3>
         <p className="mx-4 md:mx-10 my-4 text-center md:text-left tracking-wide font-light">
           {config.contact.text}
         </p>
@@ -82,6 +87,6 @@ const IndexPage = () => (
       </Card>
     </section>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

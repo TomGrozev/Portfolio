@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/common/Layout"
-import BlogList from "../components/common/BlogList"
+import React from "react";
+import Layout from "../components/layout/Layout";
+import BlogList from "../components/common/BlogList";
 
 const BlogPage = ({ data }) => (
   <Layout>
@@ -10,6 +10,6 @@ const BlogPage = ({ data }) => (
       <BlogList />
     </div>
   </Layout>
-)
+);
 
-export default BlogPage
+export default BlogPage;
