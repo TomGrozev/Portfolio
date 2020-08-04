@@ -3,6 +3,7 @@ title: First Blog Post
 tags: [test1, test2, test3]
 date: 2020-01-01
 coverImage: images/slingsbytaylor.jpg
+published: false
 ---
 
 ## Description

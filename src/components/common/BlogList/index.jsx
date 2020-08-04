@@ -60,6 +60,7 @@ const BlogList = ({ limit }) => {
                   }
                 }
               }
+              published
             }
             fields {
               slug
@@ -70,16 +71,20 @@ const BlogList = ({ limit }) => {
       }
     }
   `);
-  const posts =
+  let posts =
     limit === 0
       ? data.allMarkdownRemark.edges
       : data.allMarkdownRemark.edges.slice(0, limit);
+  posts = posts.filter(post => post.node.frontmatter.published);
 
   return (
-    <div className="flex flex-wrap justify-around my-8">
-      {posts.map((post) => (
+    <div className="flex flex-wrap justify-around my-12">
+      {posts.length ? posts.map((post) => (
         <BlogItem key={post.node.fields.slug} post={post} />
-      ))}
+      ))
+      :
+        <p className="text-center text-sm text-gray-800 my-16">There are no blog posts yet.</p>
+      }
     </div>
   );
 };

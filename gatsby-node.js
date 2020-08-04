@@ -24,12 +24,14 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await getBlogData(graphql);
 
   data.blogPosts.edges.forEach(({ node }) => {
-    const { slug } = node.fields;
-    actions.createPage({
-      path: `/blog/${slug}`,
-      component: path.resolve("./src/templates/blog-post.js"),
-      context: { slug },
-    });
+    if (node.frontmatter.published) {
+      const { slug } = node.fields;
+      actions.createPage({
+        path: `/blog/${slug}`,
+        component: path.resolve("./src/templates/blog-post.js"),
+        context: { slug },
+      });
+    }
   });
 };
 
@@ -39,6 +41,9 @@ async function getBlogData(graphql) {
       blogPosts: allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              published
+            }
             fields {
               slug
             }
