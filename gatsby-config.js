@@ -63,6 +63,12 @@ module.exports = {
     },
     `gatsby-plugin-zopfli`,
     {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+        args: `?render=explicit`
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Tom Grozev | Full Stack Developer`,

@@ -37,9 +37,9 @@ import Jenkins, {
 import Jetbrains, {
   ReactComponent as JetbrainsInline,
 } from "../images/icons/jetbrains.svg";
-import Kubernets, {
-  ReactComponent as KubernetsInline,
-} from "../images/icons/kubernets.svg";
+import Kubernetes, {
+  ReactComponent as KubernetesInline,
+} from "../images/icons/kubernetes.svg";
 import Linkedin, {
   ReactComponent as LinkedinInline,
 } from "../images/icons/linkedin.svg";
@@ -103,7 +103,7 @@ export const Icons = {
   Jenkins,
   Jetbrains,
   Jira,
-  Kubernets,
+  Kubernetes,
   Linkedin,
   Linux,
   Mail,
@@ -140,7 +140,7 @@ export const InlineIcons = {
   Jira: JenkinsInline,
   Jenkins: JetbrainsInline,
   Jetbrains: JiraInline,
-  Kubernets: KubernetsInline,
+  Kubernetes: KubernetesInline,
   Linkedin: LinkedinInline,
   Linux: LinuxInline,
   Mail: MailInline,

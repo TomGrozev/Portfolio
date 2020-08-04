@@ -115,8 +115,8 @@ export default {
               title: "Linux",
             },
             {
-              icon: Icons.Kubernets,
-              title: "Kubernets",
+              icon: Icons.Kubernetes,
+              title: "Kubernetes",
             },
             {
               icon: Icons.Aws,
@@ -165,7 +165,7 @@ export default {
         title: "Pretty Good Auth",
         text:
           "A solution to the complex authentication and authorization required by enterprise applications.",
-        tech: [Icons.Elixir, Icons.Phoenix, Icons.Kubernets],
+        tech: [Icons.Elixir, Icons.Phoenix, Icons.Kubernetes],
         indev: true,
       },
       {
@@ -219,6 +219,10 @@ export default {
         link: "mailto:enquire@tomgrozev.com",
       },
     ],
+  },
+  form: {
+    url: "https://send.pageclip.co/y53vjfHu8EQ4Q4D0aJrrePO8sWLLuYUp/start-a-project",
+    title: "Let's get your project off the ground. Let's have a chat"
   },
   footer: {
     text: "Where inspiration and commitment meet.",
