@@ -9,7 +9,7 @@ const PictureCard = ({ image, title, text, tech, indev, link }) => {
   return (
     <LinkOrNotTag
       className="relative shadow-lg rounded-lg group flex flex-1 justify-center items-center mx-2 my-3 bg-black"
-      style={{ minWidth: "320px", maxHeight: "280px" }}
+      style={{ minWidth: "300px", maxHeight: "280px", minHeight: "190px" }}
       href={link}
       target="_blank"
       rel="noreferrer"
@@ -17,7 +17,7 @@ const PictureCard = ({ image, title, text, tech, indev, link }) => {
       <Image
         src={image}
         alt={title}
-        classes="rounded-lg h-full w-full absolute z-10 bg-cover bg-center group-hover:opacity-50 transition-all duration-500 ease-in-out pointer-events-none"
+        classes="rounded-lg object-cover h-full w-full absolute z-10 bg-cover bg-center group-hover:opacity-50 transition-all duration-500 ease-in-out pointer-events-none"
       />
       {indev && (
         <span className="uppercase text-white text-xs absolute right-0 top-0 mt-2 mr-2 pointer-events-none">

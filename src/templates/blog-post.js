@@ -4,14 +4,16 @@ import Layout from "../components/layout/Layout";
 import Icon from "../components/common/Icon";
 import Icons from "../components/icons";
 import Img from "gatsby-image";
+import SEO from "../components/common/SEO"
 
 const BlogPost = ({ data }) => {
   const { title, tags, date, coverImage } = data.markdownRemark.frontmatter;
-  const { html } = data.markdownRemark;
+  const { html, excerpt } = data.markdownRemark;
 
   return (
     <Layout>
-      <div className="my-10">
+      <SEO title={title} preview={coverImage} description={excerpt} type="article" />
+      <div className="my-10 blog-post">
         <div className="border-b-2 border-gray-300 py-3 mb-10">
           <Img fluid={coverImage.childImageSharp.fluid} />
           <div className="mt-8">
@@ -54,6 +56,7 @@ export const BlogQuery = graphql`
         }
       }
       html
+      excerpt(pruneLength: 100)
     }
   }
 `;

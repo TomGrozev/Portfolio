@@ -14,7 +14,7 @@ import Projects from "../components/landing/Projects";
 const IndexPage = () => (
   <Layout home={true}>
     <SEO title="Home" />
-    <section id="home">
+    <section id="home" className="mt-0">
       <Hero />
     </section>
     <section id="about">
@@ -22,7 +22,7 @@ const IndexPage = () => (
         <h3 className="text-center font-semibold text-white text-3xl my-4">
           {config.about.title}
         </h3>
-        <p className="w-full md:w-9/12 mx-auto mt-2 mb-4 text-center tracking-wide font-light">
+        <p className="w-full md:w-9/12 mx-auto mt-2 mb-4 text-center tracking-wide leading-relaxed font-light">
           {config.about.description}
         </p>
       </Card>
@@ -48,7 +48,7 @@ const IndexPage = () => (
           contributions.
         </p>
         <a
-          className="button-darker"
+          className="button-darker mt-3"
           target="_blank"
           rel="noreferrer"
           href="https://github.com/TomGrozev"
@@ -75,7 +75,7 @@ const IndexPage = () => (
         dark={true}
         classes="z-30 py-6 px-10 flex flex-wrap md:flex-no-wrap items-center justify-around"
       >
-        <h3 className="font-semibold text-white text-xl md:my-4">
+        <h3 className="font-semibold text-white text-xl md:my-4 text-center md:text-left">
           {config.contact.title}
         </h3>
         <p className="mx-4 md:mx-10 my-4 text-center md:text-left tracking-wide font-light">

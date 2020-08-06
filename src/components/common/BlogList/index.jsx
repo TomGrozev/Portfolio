@@ -17,6 +17,7 @@ const BlogItem = ({ post }) => {
 
   return (
     <button
+      rel="canonical"
       className="shadow hover:shadow-lg focus:outline-none rounded-sm transform hover:-translate-y-2 transition-all ease-in-out duration-200 bg-white cursor-pointer m-3 flex-1"
       style={{ maxWidth: "400px", minWidth: "300px" }}
       onClick={() => handlePostClick(slug)}
@@ -27,7 +28,7 @@ const BlogItem = ({ post }) => {
         <h3 className="font-semibold">{title}</h3>
         <span className="text-sm mt-1 text-gray-500">{date}</span>
         <p className="text-gray-600 text-sm leading-tight">{excerpt}</p>
-        <div className="text-sm text-gray-600 space-x-1">
+        <div className="text-sm text-gray-600 space-x-1 mt-2">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -46,7 +47,7 @@ const BlogItem = ({ post }) => {
 const BlogList = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, filter: {frontmatter: {published: {ne: false}}}) {
         edges {
           node {
             frontmatter {
@@ -60,7 +61,6 @@ const BlogList = ({ limit }) => {
                   }
                 }
               }
-              published
             }
             fields {
               slug
@@ -71,11 +71,10 @@ const BlogList = ({ limit }) => {
       }
     }
   `);
-  let posts =
+  const posts =
     limit === 0
       ? data.allMarkdownRemark.edges
       : data.allMarkdownRemark.edges.slice(0, limit);
-  posts = posts.filter(post => post.node.frontmatter.published);
 
   return (
     <div className="flex flex-wrap justify-around my-12">

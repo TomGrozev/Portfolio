@@ -7,6 +7,7 @@ import SelectField from "../components/common/SelectField"
 import TextArea from "../components/common/TextArea"
 import { allOf, isRequired, validateEmail } from "../components/validators"
 import config from "../data/config"
+import SEO from "../components/common/SEO"
 
 const StartAProject = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -30,6 +31,7 @@ const StartAProject = () => {
 
   return (
     <Layout>
+      <SEO title="Start a Project" />
       <div className="container relative my-16 px-16">
         <h2 className="text-4xl tracking-tighter font-light text-center leading-normal">
           {config.form.title}

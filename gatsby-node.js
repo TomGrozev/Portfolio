@@ -24,26 +24,21 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await getBlogData(graphql);
 
   data.blogPosts.edges.forEach(({ node }) => {
-    if (node.frontmatter.published) {
-      const { slug } = node.fields;
-      actions.createPage({
-        path: `/blog/${slug}`,
-        component: path.resolve("./src/templates/blog-post.js"),
-        context: { slug },
-      });
-    }
+    const { slug } = node.fields;
+    actions.createPage({
+      path: `/blog/${slug}`,
+      component: path.resolve("./src/templates/blog-post.js"),
+      context: { slug },
+    });
   });
 };
 
 async function getBlogData(graphql) {
   return await graphql(`
     {
-      blogPosts: allMarkdownRemark {
+      blogPosts: allMarkdownRemark(filter: {frontmatter: {published: {ne: false}}}) {
         edges {
           node {
-            frontmatter {
-              published
-            }
             fields {
               slug
             }
