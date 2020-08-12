@@ -2,7 +2,7 @@
   "name": "tomgrozev-portfolio",
   "private": true,
   "description": "My personal portfolio website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Tom Grozev <enquire@tomgrozev.com>",
   "dependencies": {
     "@manishrc/tailwindcss-typography-js": "^0.1.7",
@@ -49,6 +49,7 @@
     "@svgr/webpack": "^5.4.0",
     "cssnano": "^4.1.10",
     "gatsby-link": "^2.4.13",
+    "gatsby-plugin-s3": "^0.3.4",
     "postcss-import": "^12.0.1",
     "postcss-simple-vars": "^5.0.2",
     "prettier": "2.0.5",
@@ -56,7 +57,7 @@
     "tailwindcss": "^1.5.2"
   },
   "keywords": [
-    "gatsby"
+    "portfolio"
   ],
   "license": "0BSD",
   "scripts": {
@@ -66,13 +67,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby-plugin-s3 deploy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/TomGrozev/Portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/TomGrozev/Portfolio/issues"
   }
 }

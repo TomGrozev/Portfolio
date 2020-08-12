@@ -16,7 +16,7 @@ const Footer = ({ home }) => (
       </p>
 
       <SocialIcons icons={config.contact.socials} />
-      <small className="text-gray-500 mt-3">Made with love in Australia.</small>
+      <small className="text-gray-500 mt-3">Made by me.</small>
     </div>
   </footer>
 );

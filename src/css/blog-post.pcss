@@ -3,6 +3,10 @@
         @apply text-2xl font-semibold tracking-wide mt-8 mb-4;
     }
 
+    h3 {
+        @apply text-xl font-semibold tracking-wide mt-8 mb-3;
+    }
+
     p {
         @apply tracking-tight mb-4;
     }
@@ -31,13 +35,13 @@
 
     .gatsby-highlight {
         border-radius: 0.3em;
-        margin: 0.5em 0;
+        margin: 0.8em 0;
         overflow: auto;
     }
 
     .gatsby-highlight pre[class*="language-"] {
         margin: 0;
-        padding: 0;
+        padding: 0.7em 0 0.7em 0.7em;
         overflow: initial;
         float: left; /* 1 */
         min-width: 100%; /* 2 */
@@ -48,6 +52,24 @@
 
         .line-numbers-rows {
             padding-left: 5px;
+        }
+    }
+
+    .footnotes {
+        @apply mt-12;
+
+        ol {
+            @apply mt-5;
+
+            li {
+                p {
+                    display: inline;
+                }
+
+                .footnote-backref {
+                    @apply clear-link;
+                }
+            }
         }
     }
 

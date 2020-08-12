@@ -48,10 +48,12 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1024,
               linkImagesToOriginal: false,
               showCaptions: true,
-              markdownCaptions: true
+              markdownCaptions: true,
+              quality: 80,
+              withWebp: true
             }
           },
           `gatsby-remark-prismjs`,
@@ -81,6 +83,12 @@ module.exports = {
       options: {
         args: `?render=explicit`
       }
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "tomgrozev-portfolio",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

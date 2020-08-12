@@ -222,7 +222,7 @@ export default {
   },
   form: {
     url: "https://send.pageclip.co/y53vjfHu8EQ4Q4D0aJrrePO8sWLLuYUp/start-a-project",
-    title: "Let's get your project off the ground. Let's have a chat"
+    title: "Let's get your project off the ground. Time for a chat"
   },
   footer: {
     text: "Where inspiration and commitment meet.",
