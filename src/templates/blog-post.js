@@ -23,7 +23,7 @@ const BlogPost = ({ data }) => {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-gray-300 py-1 px-2 leading-none rounded-lg inline-flex items-center"
+                  className="bg-gray-300 py-1 px-2 my-1 leading-none rounded-lg inline-flex items-center"
                 >
                   <Icon icon={Icons.Tag} size={0.7} />{" "}
                   <span className="ml-1">{tag}</span>

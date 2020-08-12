@@ -31,11 +31,11 @@ const StartAProject = () => {
 
   return (
     <Layout>
-      <SEO title="Start a Project" />
+      <SEO title="Start a Project" description="Let's get a project started. Send me a message" />
       <div className="container relative my-16 px-16">
-        <h2 className="text-4xl tracking-tighter font-light text-center leading-normal">
+        <h1 className="text-4xl tracking-tighter font-light text-center leading-normal">
           {config.form.title}
-        </h2>
+        </h1>
 
         <Form className="w-11/12 md:w-8/12 mx-auto mt-10">
           <div className="flex flex-wrap -mx-3 mb-4">

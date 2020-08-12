@@ -21,6 +21,7 @@ function SEO({ description, lang, meta, title, preview, type }) {
             description
             author
             siteUrl
+            keywords
           }
         }
       }
@@ -40,11 +41,12 @@ function SEO({ description, lang, meta, title, preview, type }) {
 
   return (
     <Helmet
+      defer={false}
       htmlAttributes={{
         lang: metaLang
       }}
-      title={metaTitle}
-      titleTemplate={site.siteMetadata.title}
+      title={site.siteMetadata.title}
+      titleTemplate={metaTitle}
       meta={[
         {
           name: `description`,
@@ -93,6 +95,10 @@ function SEO({ description, lang, meta, title, preview, type }) {
         {
           name: `twitter:image`,
           content: image
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords
         }
       ].concat(meta)}
     />

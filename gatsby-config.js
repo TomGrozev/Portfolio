@@ -3,7 +3,8 @@ module.exports = {
     title: "Tom Grozev | Full Stack Developer",
     description: "Hi, I'm Tom. I am a freelance developer from Australia. I develop systems built with the end-user at the forefront of development.",
     author: "Tom Grozev",
-    siteUrl: "https://tomgrozev.com"
+    siteUrl: "https://tomgrozev.com",
+    keywords: "fullstack,blog,development,australia,elixir,python,"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,6 +20,17 @@ module.exports = {
       options: {
         policy: [{ userAgent: '*', allow: '/' }]
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-93159886-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+        defer: false,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -88,6 +100,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "tomgrozev-portfolio",
+        acl: null
       },
     },
     {
