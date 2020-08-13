@@ -58,22 +58,6 @@ const StartAProject = () => {
               />
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <SelectField
-                field="type"
-                fieldName="Project Type"
-                options={["Web App", "REST/GraphQL API", "Mobile App", "Multilevel platform"]}
-                validate={isRequired}/>
-            </div>
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <SelectField
-                field="budget"
-                fieldName="Approximate Budget"
-                options={["Less than $5,000", "$5,000 - $10,000", "$10,000 - $25,000", "$25,000+"]}
-                validate={isRequired}/>
-            </div>
-          </div>
           <div className="flex flex-wrap -mx-3 mb-2">
             <div className="w-full px-3">
               <TextArea
