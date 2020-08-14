@@ -7,18 +7,18 @@ import Img from "gatsby-image";
 import SEO from "../components/common/SEO"
 
 const BlogPost = ({ data }) => {
-  const { title, tags, date, coverImage } = data.markdownRemark.frontmatter;
+  const { title, tags, date, dateFormatted, coverImage } = data.markdownRemark.frontmatter;
   const { html, excerpt } = data.markdownRemark;
 
   return (
     <Layout>
-      <SEO title={title} preview={coverImage} description={excerpt} type="article" />
+      <SEO title={title} preview={coverImage} description={excerpt} type="article" publishDate={date} />
       <div className="my-10 blog-post">
         <div className="border-b-2 border-gray-300 py-3 mb-10">
           <Img fluid={coverImage.childImageSharp.fluid} />
           <div className="mt-8">
             <h1 className="text-4xl font-bold">{title}</h1>
-            <p className="mb-2">{date}</p>
+            <p className="mb-2">Published {dateFormatted}</p>
             <div className="text-sm text-gray-600 space-x-3">
               {tags.map((tag) => (
                 <span
@@ -46,7 +46,8 @@ export const BlogQuery = graphql`
       frontmatter {
         title
         tags
-        date(formatString: "MMM Do, YYYY")
+        date
+        dateFormatted: date(formatString: "MMM Do, YYYY")
         coverImage {
           childImageSharp {
             fluid(maxWidth: 1280) {

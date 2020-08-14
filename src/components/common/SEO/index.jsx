@@ -10,8 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import previewImg from "../../../images/logo-colour-small.png"
+import { useLocation } from "@reach/router"
 
-function SEO({ description, lang, meta, title, preview, type }) {
+function SEO({ description, lang, meta, title, preview, type, publishDate }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,6 +23,7 @@ function SEO({ description, lang, meta, title, preview, type }) {
             author
             siteUrl
             keywords
+            twitterUsername
           }
         }
       }
@@ -32,12 +34,9 @@ function SEO({ description, lang, meta, title, preview, type }) {
   const metaLang = lang || "en"
   const metaDescription = description || site.siteMetadata.description
   const metaType = type || "website"
+  const metaUrl =  site.siteMetadata.siteUrl + useLocation().pathname
 
-  let origin = ""
-  if (typeof window !== "undefined") {
-    origin = window.location.origin
-  }
-  const image = origin + ((preview && preview.childImageSharp.fluid.src) || previewImg)
+  const image = site.siteMetadata.siteUrl + ((preview && preview.childImageSharp.fluid.src) || previewImg)
 
   return (
     <Helmet
@@ -49,12 +48,16 @@ function SEO({ description, lang, meta, title, preview, type }) {
       titleTemplate={metaTitle}
       meta={[
         {
+          name: `author`,
+          content: site.siteMetadata.author
+        },
+        {
           name: `description`,
           content: metaDescription
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.siteUrl
+          content: metaUrl
         },
         {
           property: `og:title`,
@@ -73,6 +76,10 @@ function SEO({ description, lang, meta, title, preview, type }) {
           content: image
         },
         {
+          property: `og:image:secure_url`,
+          content: image
+        },
+        {
           property: `og:type`,
           content: `website`
         },
@@ -81,8 +88,12 @@ function SEO({ description, lang, meta, title, preview, type }) {
           content: `summary`
         },
         {
+          name: `twitter:card`,
+          content: `summary_large_image`
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: site.siteMetadata.twitterUsername
         },
         {
           name: `twitter:title`,
@@ -99,6 +110,14 @@ function SEO({ description, lang, meta, title, preview, type }) {
         {
           name: `keywords`,
           content: site.siteMetadata.keywords
+        },
+        {
+          name: `article:published_time`,
+          content: metaType === 'article' && publishDate ? publishDate : null
+        },
+        {
+          name: `article:author`,
+          content: metaType === 'article' ? site.siteMetadata.author : null
         }
       ].concat(meta)}
     />

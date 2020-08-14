@@ -4,7 +4,8 @@ module.exports = {
     description: "Hi, I'm Tom. I am a freelance developer from Australia. I develop systems built with the end-user at the forefront of development.",
     author: "Tom Grozev",
     siteUrl: "https://tomgrozev.com",
-    keywords: "fullstack,blog,development,australia,elixir,python,"
+    keywords: "fullstack,blog,development,australia,elixir,python",
+    twitterUsername: "TomGrozev"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
