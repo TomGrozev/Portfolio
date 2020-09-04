@@ -44,7 +44,7 @@ const IndexPage = () => (
 
       <div className="my-32 flex flex-col items-center">
         <p className="text-center text-xl tracking-tight">
-          Code is always better when its open sourced. Take a look at my
+          Code is always better when it's open sourced. Take a look at my
           contributions.
         </p>
         <a

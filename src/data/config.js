@@ -161,8 +161,8 @@ export default {
         link: "https://slingsbytaylor.com",
       },
       {
-        image: "projects/pretty-good-auth.jpg",
-        title: "Pretty Good Auth",
+        image: "projects/molten-auth.jpg",
+        title: "Molten Auth",
         text:
           "A solution to the complex authentication and authorization required by enterprise applications.",
         tech: [Icons.Elixir, Icons.Phoenix, Icons.Kubernetes],
